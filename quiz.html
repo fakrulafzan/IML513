@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniVerse: Wonders of Planet</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/solar.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #1a1a40;
+      padding-top: 120px; /* Space for fixed header */
+      padding-bottom: 80px; /* Space for fixed footer */
+    }
+
+    .main-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1a1a40;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .main-header img.logo {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    .main-header h1 {
+      font-size: 3rem;
+      margin: 10px 0 5px;
+      color: #ffdb58;
+    }
+
+    .main-header .tagline {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    nav {
+  background-color: #fff0c9;
+  padding: 20px 20px;
+  margin-top: 18px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffdb58;
+  background-color: #1a1a40;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffc107;
+  transform: scale(1.1);
+}
+
+    .quiz-container {
+      background: #1a1a40;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      color: white;
+      min-height: 300px;
+    }
+
+    .question {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .options button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      border: none;
+      background-color: #c2f0fc;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .options button:hover {
+      background-color: #90e0ef;
+    }
+
+    .result {
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .navigation-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .navigation-buttons button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 10px;
+      background-color: #ffdb58;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .navigation-buttons button:hover {
+      background-color: #ffc107;
+    }
+
+    .final-buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .final-buttons button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin: 10px;
+      background-color: #ffdb58;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .final-buttons button:hover {
+      background-color: #ffc107;
+    }
+
+    #start-screen {
+  text-align: center;
+  margin-top: 80px;
+}
+
+    .start-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: #ffdb58;
+  border: none;
+  border-radius: 50px;
+  color: #1a1a40;
+  font-family: 'Audiowide', cursive;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1a1a40;
+      text-align: center;
+      padding: 10px;
+      color: white;
+      font-size: 1rem;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html">
+      <img src="images/planet.gif" alt="Planet Explorer Logo" class="logo">
+    </a>
+    <h1>MiniVerse: Wonders of Planet</h1>
+    <p class="tagline">A Fun Space Adventure for Kids!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="quiz.html">Restart</a></li>
+      <li><a href="planets.html">Learn First</a></li>
+    </ul>
+  </nav>
+
+  <div id="start-screen" class="quiz-container" style="text-align: center;">
+    <h2>Are You Ready for a Space Quiz? 🚀</h2>
+    <p>Test your knowledge of planets, astronauts and space agencies!</p>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
+  </div>
+
+  <div class="quiz-container" id="quiz" style="display:none;">
+    <h2>MiniVerse: Wonders of Space Quiz</h2>
+    <div class="question" id="question"></div>
+    <div class="options">
+      <button onclick="checkAnswer('A')" id="optA"></button>
+      <button onclick="checkAnswer('B')" id="optB"></button>
+      <button onclick="checkAnswer('C')" id="optC"></button>
+      <button onclick="checkAnswer('D')" id="optD"></button>
+    </div>
+    <div class="result" id="result"></div>
+
+    <div class="navigation-buttons">
+      <button onclick="previousQuestion()">⬅ Previous</button>
+      <button onclick="nextQuestion()">➡ Next</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Planet Explorer. Learn and have fun in space!</p>
+  </footer>
+
+  <script>
+    const questions = [
+      { q: "Which planet is known as the Red Planet?", a: "B", options: ["Earth", "Mars", "Venus", "Jupiter"] },
+      { q: "Which planet is closest to the Sun?", a: "A", options: ["Mercury", "Venus", "Earth", "Mars"] },
+      { q: "Which planet has the most moons?", a: "C", options: ["Earth", "Mars", "Saturn", "Neptune"] },
+      { q: "Which planet is known for its rings?", a: "B", options: ["Jupiter", "Saturn", "Uranus", "Neptune"] },
+      { q: "Which planet is the hottest?", a: "B", options: ["Mercury", "Venus", "Mars", "Jupiter"] },
+      { q: "Which space agency belongs to the USA?", a: "A", options: ["NASA", "CNSA", "ISRO", "JAXA"] },
+      { q: "Which space agency is from China?", a: "B", options: ["ISRO", "CNSA", "NASA", "ESA"] },
+      { q: "Which space agency is from Japan?", a: "C", options: ["ESA", "ISRO", "JAXA", "Roscosmos"] },
+      { q: "Roscosmos is from which country?", a: "D", options: ["India", "USA", "Europe", "Russia"] },
+      { q: "ESA stands for?", a: "A", options: ["European Space Agency", "Eastern Space Agency", "Earth Survey Association", "Eagle Space Alliance"] },
+      { q: "Which astronaut was the first human on the Moon?", a: "B", options: ["Yuri Gagarin", "Neil Armstrong", "Chris Hadfield", "Sheikh Muszaphar"] },
+      { q: "Who was the first woman in space?", a: "C", options: ["Peggy Whitson", "Kalpana Chawla", "Valentina Tereshkova", "Sally Ride"] },
+      { q: "Who is Malaysia’s first astronaut?", a: "A", options: ["Sheikh Muszaphar", "Chris Hadfield", "Yuri Gagarin", "Neil Armstrong"] },
+      { q: "Which astronaut is famous for singing in space?", a: "D", options: ["Buzz Aldrin", "Sheikh Muszaphar", "Peggy Whitson", "Chris Hadfield"] },
+      { q: "Yuri Gagarin was from which country?", a: "C", options: ["USA", "Malaysia", "Russia", "Canada"] }
+    ];
+
+    let current = 0;
+    let score = 0;
+    let answered = Array(questions.length).fill(false);
+
+    function startQuiz() {
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('quiz').style.display = 'block';
+      current = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = questions[current];
+      document.getElementById("question").textContent = `${current + 1}. ${q.q}`;
+      document.getElementById("optA").textContent = `A. ${q.options[0]}`;
+      document.getElementById("optB").textContent = `B. ${q.options[1]}`;
+      document.getElementById("optC").textContent = `C. ${q.options[2]}`;
+      document.getElementById("optD").textContent = `D. ${q.options[3]}`;
+      document.getElementById("result").textContent = '';
+    }
+
+    function checkAnswer(selected) {
+      if (answered[current]) return; // prevent multiple answers
+      answered[current] = true;
+
+      const correct = questions[current].a;
+      if (selected === correct) {
+        score++;
+        document.getElementById("result").textContent = "✅ Correct!";
+      } else {
+        document.getElementById("result").textContent = `❌ Oops! Correct: ${correct}`;
+      }
+    }
+
+    function nextQuestion() {
+      if (current < questions.length - 1) {
+        current++;
+        showQuestion();
+      } else {
+        showFinalScore();
+      }
+    }
+
+    function previousQuestion() {
+      if (current > 0) {
+        current--;
+        showQuestion();
+      }
+    }
+
+    function showFinalScore() {
+      document.getElementById("quiz").innerHTML = `
+        <h2>Quiz Finished!</h2>
+        <p>You scored ${score} out of ${questions.length}!</p>
+        <div class="final-buttons">
+          <button onclick="location.reload()">🔄 Try Again</button>
+          <button onclick="window.location.href='index.html'">🏠 Back to Home</button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>

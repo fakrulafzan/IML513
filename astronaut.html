@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniVerse: Astronauts</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      background: linear-gradient(to right, #1a1a40, #302b63, #1a1a40);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    .main-header {
+      background: #1a1a40;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .main-header img.logo {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    .main-header h1 {
+      font-size: 3rem;
+      margin: 10px 0 5px;
+      color: #ffdb58;
+    }
+
+    .main-header .tagline {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    nav {
+      background-color: #fff0c9;
+      padding: 20px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffdb58;
+      background-color: #1a1a40;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc107;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    main h2 {
+      font-family: 'Audiowide', cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 40px;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #ffdb58;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .astro-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .astro-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #fecd57;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .astro-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+      transition: transform 0.3s ease;
+    }
+
+    .astro-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .astro-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .astro-caption {
+      background: #1a1a40;
+      color: #ffdb58;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    
+
+    footer {
+      background-color: #1a1a40;
+      color: #ffdb58;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html">
+      <img src="images/planet.gif" alt="Planet Explorer Logo" class="logo">
+    </a>
+    <h1>MiniVerse: Wonders of Planet</h1>
+    <p class="tagline">A Fun Space Adventure for Kids!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="solar.html">Solar System</a></li>
+      <li><a href="planets.html">Planets</a></li>
+      <li><a href="agency.html">Agencies</a></li>
+      <li><a href="video.html">Video</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Brave Astronauts</h2>
+
+    <div class="astro-gallery">
+      <div class="astro-card">
+        <img src="images/syeikh.jpg" alt="Syeikh Muszaphar">
+        <div class="astro-caption">Dr. Syeikh Muszaphar Shukor - Malaysia</div>
+      </div>
+
+      <div class="astro-card">
+        <img src="images/neil.jpg" alt="Neil Armstrong">
+        <div class="astro-caption">Neil Armstrong
+            <p>USA</p>
+        </div>
+      </div>
+
+      <div class="astro-card">
+        <img src="images/yuri.jpg" alt="Yuri Gagarin">
+        <div class="astro-caption">Yuri Gagarin
+            <p>Russia</p>
+        </div>
+      </div>
+
+      <div class="astro-card">
+        <img src="images/valentina.jpg" alt="Valentina Tereshkova">
+        <div class="astro-caption">Valentina Tereshkova - Russia</div>
+      </div>
+
+      <div class="astro-card">
+        <img src="images/chris.jpg" alt="Chris Hadfield">
+        <div class="astro-caption">Chris Hadfield - Canada</div>
+      </div>
+
+      <div class="astro-card">
+        <img src="images/peggy.jpg" alt="Peggy Whitson">
+        <div class="astro-caption">Peggy Whitson - USA</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Planet Explorer. Reach for the stars with MiniVerse!</p>
+  </footer>
+</body>
+</html>

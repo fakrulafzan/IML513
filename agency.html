@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniVerse: Space Agencies</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Chewy', cursive;
+      background: linear-gradient(to right, #1a1a40, #302b63, #1a1a40);
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+    .main-header {
+      background: #1a1a40;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .main-header img.logo {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    .main-header h1 {
+      font-size: 3rem;
+      margin: 10px 0 5px;
+      color: #ffdb58;
+    }
+
+    .main-header .tagline {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    nav {
+      background-color: #fff0c9;
+      padding: 20px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffdb58;
+      background-color: #1a1a40;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc107;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    main h2 {
+      font-family: 'Audiowide', cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 40px;
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #ffdb58;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .agency-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .agency-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #fecd57;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .agency-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+      transition: transform 0.3s ease;
+    }
+
+    .agency-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+
+    .agency-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .agency-caption {
+      background: #1a1a40;
+      color: #ffdb58;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1rem;
+      border-radius: 0 0 20px 20px;
+    }
+
+    footer {
+      background-color: #1a1a40;
+      color: #ffdb58;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header class="main-header">
+    <a href="index.html">
+      <img src="images/planet.gif" alt="Planet Explorer Logo" class="logo">
+    </a>
+    <h1>MiniVerse: Wonders of Planet</h1>
+    <p class="tagline">A Fun Space Adventure for Kids!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+      <li><a href="solar.html">Solar System</a></li>
+      <li><a href="planets.html">Planets</a></li>
+      <li><a href="astronaut.html">Astronaut</a></li>
+      <li><a href="video.html">Videos</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Famous Space Agencies</h2>
+
+    <div class="agency-gallery">
+      <div class="agency-card">
+        <img src="images/nasa.jpg" alt="NASA">
+        <div class="agency-caption">NASA - USA</div>
+      </div>
+
+      <div class="agency-card">
+        <img src="images/esa.jpg" alt="ESA">
+        <div class="agency-caption">ESA - Europe</div>
+      </div>
+
+      <div class="agency-card">
+        <img src="images/isro.jpg" alt="ISRO">
+        <div class="agency-caption">ISRO - India</div>
+      </div>
+
+      <div class="agency-card">
+        <img src="images/jaxa.jpg" alt="JAXA">
+        <div class="agency-caption">JAXA - Japan</div>
+      </div>
+
+      <div class="agency-card">
+        <img src="images/cnsa.jpg" alt="CNSA">
+        <div class="agency-caption">CNSA - China</div>
+      </div>
+
+      <div class="agency-card">
+        <img src="images/roscosmos.jpg" alt="ROSCOSMOS">
+        <div class="agency-caption">Roscosmos - Russia</div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Planet Explorer. Reach for the stars with MiniVerse!</p>
+  </footer>
+
+</body>
+</html>

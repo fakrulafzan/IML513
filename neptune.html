@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiniVerse: Wonders of Planet - Neptune</title>
+
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+        body {
+      font-family: 'Chewy', cursive;
+      margin: 0;
+      background-image: url(images/space.jpg);
+      background-size: cover;
+      color: #f0f0f0;
+      padding: 0 10px;
+    }
+
+    .main-header {
+      background: #1a1a40;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .main-header img.logo {
+      width: 100px;
+      vertical-align: middle;
+    }
+
+    .main-header h1 {
+      font-size: 3rem;
+      margin: 10px 0 5px;
+      color: #ffdb58;
+    }
+
+    .main-header .tagline {
+      font-size: 1.2rem;
+      color: white;
+    }
+
+    nav {
+      background-color: #fff0c9;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ffdb58;
+      background-color: #1a1a40;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 1rem;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffc107;
+    }
+
+    main {
+      width: 100%;
+      padding: 40px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    main h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ffdb58;
+    }
+
+    h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .planet-info {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      background-image: url('images/space.jpg');
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .planet-info:hover {
+      transform: scale(1.02);
+    }
+
+    .planet-info h3 {
+      color: #ffdb58;
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .planet-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .planet-info ul li {
+      margin-bottom: 15px;
+    }
+
+    .planet-info img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .audio-player {
+      margin-top: 20px;
+    }
+
+    .navigation-buttons {
+      margin-top: 40px;
+    }
+
+    .navigation-buttons button {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      background-color: #ffdb58;
+      color: #1a1a40;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .navigation-buttons button:hover {
+      background-color: #ffc107;
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #1a1a40;
+      color: #ffdb58;
+      padding: 20px;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 40px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-header,
+    footer {
+      width: 100vw;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html">
+      <img src="images/planet.gif" alt="Planet Explorer Logo" class="logo">
+    </a>
+    <h1>MiniVerse: Wonders of Planet</h1>
+    <p class="tagline">A Fun Space Adventure for Kids!</p>
+  </header>
+
+  <!-- Main Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="planets.html">Planets</a></li>
+      <li><a href="uranus.html"><i class="fa-solid fa-arrow-left"></i> Previous</a></li>
+      <li><a href="mercury.html"><i class="fa-solid fa-arrow-right"></i> Next</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 style="text-align: center; font-size: 2.5rem; color: #ffdb58; margin-bottom: 40px;">🪐 Neptune – The Mysterious Blue Giant</h2>
+
+    <!-- Introduction Section -->
+    <section style="background-color: rgba(30, 30, 60, 0.85); padding: 25px; border-radius: 20px; margin-bottom: 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color: #ffdd57; font-size: 2rem; margin-bottom: 15px;">🪐 Introduction</h3>
+      <img src="images/neptune1.jpg" alt="Neptune" style="width: 100%; border-radius: 15px; margin-bottom: 20px;" />
+      <p style="font-size: 1.2rem; color: #f5f5f5;">
+        Neptune is the eighth and farthest planet from the Sun. It is known for its striking blue color, caused by methane in its atmosphere.
+      </p>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section style="background-color: rgba(40, 40, 90, 0.88); padding: 25px; border-radius: 20px; margin-bottom: 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color: #7ec8e3; font-size: 2rem; margin-bottom: 20px;">📌 Fascinating Facts</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #ffc107;">
+          <strong>Distance from Sun:</strong><br> 4.5 billion km
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #00c9a7;">
+          <strong>Diameter:</strong><br> 49,244 km
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #f72585;">
+          <strong>Temperature:</strong><br> -214°C
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #ff9e00;">
+          <strong>Atmosphere:</strong><br> Hydrogen, helium, methane
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #03a9f4;">
+          <strong>Surface:</strong><br> Ice giant
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #ab47bc;">
+          <strong>Day Length:</strong><br> 16 hours
+        </div>
+        <div style="background-color: #1a1a40; padding: 15px 20px; border-radius: 15px; color: #fff; border-left: 6px solid #4caf50;">
+          <strong>Year Length:</strong><br> 165 Earth years
+        </div>
+      </div>
+    </section>
+
+    <!-- Sound Section -->
+    <section style="background-color: rgba(60, 60, 110, 0.95); padding: 25px; border-radius: 20px; margin-bottom: 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+      <h3 style="color: #ffe082; font-size: 2rem; margin-bottom: 15px;">🔊 Sounds of Neptune</h3>
+      <p style="font-size: 1.1rem; color: #f0f0f0; margin-bottom: 20px;">
+        Neptune has strange and haunting sounds due to its intense winds and storms.
+      </p>
+
+      <!-- Fancy Audio Player -->
+      <div style="background: linear-gradient(135deg, #1a1a40, #2d2d6a); padding: 20px; border-radius: 20px; display: flex; align-items: center; gap: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+        <i class="fa-solid fa-mars" style="font-size: 48px; color: #ffeb3b;"></i>
+        <audio controls style="width: 100%; filter: drop-shadow(0 0 10px #ffeb3b); border-radius: 10px;">
+          <source src="audio/neptune_sound.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Planet Explorer. Learn and have fun in space!</p>
+  </footer>
+
+  <!-- Go to Up Button -->
+  <a href="#" class="go-to-up" id="goToUpBtn"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- JavaScript for scrolling -->
+  <script>
+    let goToUpBtn = document.getElementById("goToUpBtn");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goToUpBtn.style.display = "block";
+      } else {
+        goToUpBtn.style.display = "none";
+      }
+    };
+
+    goToUpBtn.onclick = function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    };
+  </script>
+</body>
+</html>
